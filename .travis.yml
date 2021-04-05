@@ -5,17 +5,20 @@ jdk:
 script: "mvn cobertura:cobertura"
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - codecov
+env:
+   - CODECOV_TOME=583d22f4-1c33-4b5f-91ad-a370a0290fab
 
 branches:
   only:
     - master
 
-# Travis CI ¼­¹öÀÇ Home
+# Travis CI ì„œë²„ì˜ Home
 cache:
   directories:
     - $HOME/.m2
 
-# CI ½ÇÇà ¿Ï·á½Ã ¸ÞÀÏ·Î ¾Ë¶÷
+# CI ì‹¤í–‰ ì™„ë£Œì‹œ ë©”ì¼ë¡œ ì•ŒëžŒ
 notifications:
   email:
     recipients:
