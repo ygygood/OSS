@@ -13,7 +13,7 @@ branches:
   only:
     - master
 
-# Travis CI 서버의 Home
+# Travis CI 서버의 Home!
 cache:
   directories:
     - $HOME/.m2
