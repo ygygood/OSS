@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: giyeonYu/checkout@master
+      - uses: actions/checkout@master
 
       # Runs a single command using the runners shell
       - name: send custom message with args
