@@ -8,10 +8,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
-
-      # Runs a single command using the runners shell
       - name: send custom message with args
         uses: giyeonYu/OSS@master
         with:
