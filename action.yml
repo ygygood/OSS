@@ -36,3 +36,10 @@ inputs:
     description: 'disables link previews for links in this message'
   disable_notification:
     description: 'disables notifications for this message, supports sending a message without notification,'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'message-square'
+  color: 'blue'
