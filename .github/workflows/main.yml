@@ -8,9 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: send custom message
-      uses: yanzay/notify-telegram@v0.1.0
-      if: always()
+      uses: appleboy/telegram-action@master
       with:
-        chat: ${{ secrets.chat }} # user id or channel name secret
-        token: ${{ secrets.token }} # token secret
-        status: ${{ job.status }} # do not modify this line
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+          The ${{ github.event_name }} event triggered final step.
+          echo This event is a pull request that had an assignee removed.
